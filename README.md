@@ -1,2 +1,1 @@
-Kirjautumista ja registeröintiä varten tehty UI
-AuthApplication
+Kirjautumista ja registeröintiä varten tehty UI ja AuthApplication
