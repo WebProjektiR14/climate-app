@@ -2,7 +2,7 @@ import '../User.css'
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import '../Kirjautuminen';
-import '../Navbar';
+import '../components/Navbar';
 
 
 const menu = document.getElementById("menu");
