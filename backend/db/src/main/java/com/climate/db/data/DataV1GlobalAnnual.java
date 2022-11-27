@@ -1,7 +1,6 @@
 package com.climate.db.data;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;

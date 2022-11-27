@@ -10,8 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.climate.db.data.User;
 import com.climate.db.repo.UserRepository;
-import com.climate.db.data.DataV1GlobalAnnual;
-import com.climate.db.repo.DataV1GARepository;;
 @SpringBootApplication
 public class DbApplication {
 
