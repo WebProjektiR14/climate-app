@@ -1,9 +1,9 @@
 import "./App.css";
-import DataV1Chart from "./DataV1Chart";
+import DataV1GAChart from "./DataV1GAChart";
 
 function App() {
   return <div className="App"> 
-  <DataV1Chart/>
+  <DataV1GAChart/>
   
   </div>;
 }
