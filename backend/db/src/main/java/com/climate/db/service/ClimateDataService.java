@@ -12,12 +12,23 @@ import com.climate.db.data.DataV1NorthAnnual;
 import com.climate.db.data.DataV1NorthMonthly;
 import com.climate.db.data.DataV1SouthAnnual;
 import com.climate.db.data.DataV1SouthMonthly;
+import com.climate.db.data.DataV2;
+import com.climate.db.data.DataV3Annual;
+import com.climate.db.data.DataV3Monthly;
+import com.climate.db.data.DataV4Set1;
+
+
 import com.climate.db.repo.DataV1GARepository;
 import com.climate.db.repo.DataV1GMRepository;
 import com.climate.db.repo.DataV1NARepository;
 import com.climate.db.repo.DataV1NMRepository;
 import com.climate.db.repo.DataV1SARepository;
 import com.climate.db.repo.DataV1SMRepository;
+import com.climate.db.repo.DataV2Repository;
+import com.climate.db.repo.DataV3ARepository;
+import com.climate.db.repo.DataV3MRepository;
+import com.climate.db.repo.DataV4Set1Repository;
+
 import com.climate.db.repo.UserRepository;
 
 @Service
@@ -36,7 +47,6 @@ public class ClimateDataService {
 
     @Autowired
     DataV1GARepository dataV1GARepository;
-
     public List<DataV1GlobalAnnual> getDataV1GA(){
         return dataV1GARepository.findAll();
     }
@@ -69,5 +79,29 @@ public class ClimateDataService {
     DataV1SMRepository dataV1SMRepository;
     public List<DataV1SouthMonthly> getDataV1SM() {
         return dataV1SMRepository.findAll();
+    }
+
+    @Autowired
+    DataV2Repository dataV2Repository;
+    public List<DataV2> getDataV2() {
+        return dataV2Repository.findAll();
+    }
+
+    @Autowired
+    DataV3ARepository dataV3ARepository;
+    public List<DataV3Annual> getDataV3A() {
+        return dataV3ARepository.findAll();
+    }
+
+    @Autowired
+    DataV3MRepository dataV3MRepository;
+    public List<DataV3Monthly> getDataV3M() {
+        return dataV3MRepository.findAll();
+    }
+
+    @Autowired
+    DataV4Set1Repository dataV4Set1Repository;
+    public List<DataV4Set1> getDataV4Set1() {
+        return dataV4Set1Repository.findAll();
     }
 }
