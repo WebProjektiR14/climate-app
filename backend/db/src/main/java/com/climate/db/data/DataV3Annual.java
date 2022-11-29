@@ -1,6 +1,6 @@
 package com.climate.db.data;
 
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +13,7 @@ public class DataV3Annual {
     @Id
     private Integer iddata_v3_annual;
     private String year;
-    private DecimalFormat anomaly;
+    private BigDecimal co2;
 
     public DataV3Annual() {
 
@@ -23,12 +23,12 @@ public class DataV3Annual {
         return this.iddata_v3_annual;
     }
 
-    public String getDate(){
+    public String getYear(){
         return this.year;
     }
 
-    public DecimalFormat getAnomaly(){
-        return this.anomaly;
+    public BigDecimal getCo2(){
+        return this.co2;
     }
 
 }

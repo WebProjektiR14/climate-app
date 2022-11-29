@@ -13,7 +13,7 @@ public class DataV3Monthly {
     private Integer iddata_v3_monthly;
     private String year;
     private String month;
-    private BigDecimal anomaly;
+    private BigDecimal co2;
 
     public DataV3Monthly() {
 
@@ -31,8 +31,8 @@ public class DataV3Monthly {
         return this.month;
     }
 
-    public BigDecimal getAnomaly(){
-        return this.anomaly;
+    public BigDecimal getCo2(){
+        return this.co2;
     }
 
 }

@@ -10,8 +10,8 @@ public class DataV4Set1 {
 
     @Id
     private Integer iddata_v4_set1;
-    private String iceage;
-    private String airage;
+    private String ice_age;
+    private String air_age;
     private String co2;
 
     public DataV4Set1() {
@@ -23,11 +23,11 @@ public class DataV4Set1 {
     }
 
     public String getIceAge(){
-        return this.iceage;
+        return this.ice_age;
     }
 
     public String getAirAge(){
-        return this.airage;
+        return this.air_age;
     }
 
     public String getCo2(){
