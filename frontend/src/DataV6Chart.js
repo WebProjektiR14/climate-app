@@ -5,61 +5,66 @@ import { Chart as ChartJS } from "chart.js/auto";
 import axios from 'axios';
 
 
-export default class DataV5Chart extends React.Component {
+export default class DataV6Chart extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            chartData: {}
+          //  chart1Data: {},
+          //  chart2Data: {}
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/datav5')
+        axios.get('http://localhost:8080/datav6')
             .then(res => {
-                this.setState({chartData: res.data});
+                this.setState({chart1Data: res.data});
             })
     }
 
     render() {
         const data = {
-            datasets: [
-            {
-                label: "Co2 concentration (ppmv)",
-                data: this.state.chartData,
-                borderColor: "rgb(255, 99, 132)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
-                //xAxisID: "Years",
+            datasets: [{
                 
+                label: "CO2 (ppm)",
+                data: this.state.chart1Data,
+                borderColor: "#d279d2",
+                backgroundColor: "#d279d2",
                 parsing: {
-                xAxisKey: "airAge",
-                yAxisKey: "co2",
+                    xAxisKey: "gasAge",
+                    yAxisKey: "co2",
                 },
-                 pointRadius: 1,
-            },
-            ],
+            }
+
+        ],
+
+            
         };
         
         const options = {
-            scales: {x: {title: {display:true, text: 'Years BC'}}},
+            scales: {x: {reverse:true, title: {display:true, text: 'Year'}}, 
+            y:{title:{display:false, text: 'Anomaly (deg C)'}}},
             responsive: true,
+            pointRadius: 1,
             plugins: {
                 legend: {
                 position: "top",
                 },
                 title: {
                 display: true,
-                text: "V5",
+                text: "V6",
                 },
             },
          
         };
 
         return (
-            <div style={{ width: "1000px" }}>
-                <h1>Historical Co2 Records from the Vostok Ice Core</h1>
+            <div style={{ width: "90%", align:"" }}>
+                <h1>Ice core 800 000 year CO2 measurements</h1>
                 <Line options={options} data={data} />
             </div>
             );
     }
 }
+
+
