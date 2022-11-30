@@ -17,6 +17,7 @@ import com.climate.db.data.DataV2;
 import com.climate.db.data.DataV3Annual;
 import com.climate.db.data.DataV3Monthly;
 import com.climate.db.data.DataV4Set1;
+import com.climate.db.data.DataV5;
 import com.climate.db.service.ClimateDataService;
 
 @RestController
@@ -83,6 +84,12 @@ public class DataRestController {
     @GetMapping("datav4s1")
     public List<DataV4Set1> getData_v4_set1(){
         return climateDataService.getDataV4Set1();
+    }
+
+    @CrossOrigin
+    @GetMapping("datav5")
+    public List<DataV5> getData_v5(){
+        return climateDataService.getDataV5();
     }
 
 }

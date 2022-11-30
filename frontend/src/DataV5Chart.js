@@ -5,44 +5,35 @@ import { Chart as ChartJS } from "chart.js/auto";
 import axios from 'axios';
 
 
-export default class DataV1GAChart extends React.Component {
+export default class DataV5Chart extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            chart1Data: {},
-            chart2Data: {}
+            chartData: {}
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/datav1ga')
+        axios.get('http://localhost:8080/datav5')
             .then(res => {
-                this.setState({chart1Data: res.data});
-            })
-
-        axios.get('http://localhost:8080/datav1na')
-            .then(res => {
-                this.setState({chart2Data: res.data});
+                this.setState({chartData: res.data});
             })
     }
 
     render() {
         const data = {
-            datasets: [{
-                label: "V1 GA",
-                data: this.state.chart1Data,
+            datasets: [
+            {
+                label: "Co2 concentration (ppmv)",
+                data: this.state.chartData,
                 borderColor: "rgb(255, 99, 132)",
                 backgroundColor: "rgba(255, 99, 132, 0.5)",
-            },{
-                label: "V1 NA",
-                data: this.state.chart2Data,
-                borderColor: "rgb(255, 99, 1)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
-            
-            parsing: {
-                xAxisKey: "date",
-                yAxisKey: "anomaly",
+                //xAxisID: "Years",
+                
+                parsing: {
+                xAxisKey: "airAge",
+                yAxisKey: "co2",
                 },
                  pointRadius: 1,
             },
@@ -50,6 +41,7 @@ export default class DataV1GAChart extends React.Component {
         };
         
         const options = {
+            scales: {x: {title: {display:true, text: 'Years BC'}}},
             responsive: true,
             plugins: {
                 legend: {
@@ -57,7 +49,7 @@ export default class DataV1GAChart extends React.Component {
                 },
                 title: {
                 display: true,
-                text: "V1",
+                text: "V5",
                 },
             },
          
@@ -65,11 +57,9 @@ export default class DataV1GAChart extends React.Component {
 
         return (
             <div style={{ width: "1000px" }}>
-                <h1>Data V1</h1>
+                <h1>Historical Co2 Record from the Vostok Ice Core</h1>
                 <Line options={options} data={data} />
             </div>
             );
     }
 }
-
-
