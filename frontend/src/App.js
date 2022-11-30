@@ -1,7 +1,11 @@
 import "./App.css";
+import DataV1GAChart from "./DataV1GAChart";
 
 function App() {
-  return <div className="App"> Tähän tulee climate äppi</div>;
+  return <div className="App"> 
+  <DataV1GAChart/>
+  
+  </div>;
 }
 
 export default App;
