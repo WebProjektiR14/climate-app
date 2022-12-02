@@ -48,7 +48,7 @@ export default class DataV1MonthlyChart extends React.Component {
                 label: "Northern Hemisphere Monthly",
                 data: this.state.chart2Data,
                 borderColor: "rgb(127, 98, 199)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
+                backgroundColor: "rgb(127, 98, 199)",
                 parsing: {
                     xAxisKey: "date",
                     yAxisKey: "anomaly",
@@ -57,7 +57,7 @@ export default class DataV1MonthlyChart extends React.Component {
                 label: "Southern Hemisphere Monthly",
                 data: this.state.chart3Data,
                 borderColor: "rgb(214, 98, 73)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
+                backgroundColor: "rgb(214, 98, 73)",
                 parsing: {
                     xAxisKey: "date",
                     yAxisKey: "anomaly",
