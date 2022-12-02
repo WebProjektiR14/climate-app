@@ -7,17 +7,18 @@ import DataV6Chart from "./DataV6Chart";
 import DataV7Chart from "./DataV7Chart";
 import DataV9Chart from "./DataV9Chart";
 
-
 function App() {
-  return <div className="App"> 
-  <DataV9Chart/>
-  <DataV7Chart/>
-  <DataV6Chart/>
-  <DataV3Chart/>
-  <DataV1AnnualChart/>
-  <DataV1MonthlyChart/>
-  <DataV5Chart/>
-  </div>;
+  return (
+    <div className="App">
+      <DataV9Chart />
+      <DataV7Chart />
+      <DataV6Chart />
+      <DataV3Chart />
+      <DataV1AnnualChart />
+      <DataV1MonthlyChart />
+      <DataV5Chart />
+    </div>
+  );
 }
 
 export default App;
