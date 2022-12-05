@@ -18,6 +18,8 @@ import com.climate.db.data.DataV2;
 import com.climate.db.data.DataV3Annual;
 import com.climate.db.data.DataV3Monthly;
 import com.climate.db.data.DataV4Set1;
+import com.climate.db.data.DataV4Set2;
+import com.climate.db.data.DataV4Set3;
 import com.climate.db.data.DataV5;
 import com.climate.db.data.DataV6;
 import com.climate.db.data.DataV7;
@@ -88,6 +90,18 @@ public class DataRestController {
     @GetMapping("datav4s1")
     public List<DataV4Set1> getData_v4_set1(){
         return climateDataService.getDataV4Set1();
+    }
+
+    @CrossOrigin
+    @GetMapping("datav4s2")
+    public List<DataV4Set2> getData_v4_set2(){
+        return climateDataService.getDataV4Set2();
+    }
+
+    @CrossOrigin
+    @GetMapping("datav4s3")
+    public List<DataV4Set3> getData_v4_set3(){
+        return climateDataService.getDataV4Set3();
     }
 
     @CrossOrigin

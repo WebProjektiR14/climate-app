@@ -17,6 +17,8 @@ import com.climate.db.data.DataV2;
 import com.climate.db.data.DataV3Annual;
 import com.climate.db.data.DataV3Monthly;
 import com.climate.db.data.DataV4Set1;
+import com.climate.db.data.DataV4Set2;
+import com.climate.db.data.DataV4Set3;
 import com.climate.db.data.DataV5;
 import com.climate.db.data.DataV6;
 import com.climate.db.data.DataV7;
@@ -31,6 +33,8 @@ import com.climate.db.repo.DataV2Repository;
 import com.climate.db.repo.DataV3ARepository;
 import com.climate.db.repo.DataV3MRepository;
 import com.climate.db.repo.DataV4Set1Repository;
+import com.climate.db.repo.DataV4Set2Repository;
+import com.climate.db.repo.DataV4Set3Repository;
 import com.climate.db.repo.DataV5Repository;
 import com.climate.db.repo.DataV6Repository;
 import com.climate.db.repo.DataV7Repository;
@@ -111,6 +115,18 @@ public class ClimateDataService {
     DataV4Set1Repository dataV4Set1Repository;
     public List<DataV4Set1> getDataV4Set1() {
         return dataV4Set1Repository.findAll();
+    }
+
+    @Autowired
+    DataV4Set2Repository dataV4Set2Repository;
+    public List<DataV4Set2> getDataV4Set2() {
+        return dataV4Set2Repository.findAll();
+    }
+
+    @Autowired
+    DataV4Set3Repository dataV4Set3Repository;
+    public List<DataV4Set3> getDataV4Set3() {
+        return dataV4Set3Repository.findAll();
     }
 
     @Autowired

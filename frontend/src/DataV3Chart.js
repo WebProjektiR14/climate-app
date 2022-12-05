@@ -16,49 +16,88 @@ export default class DataV3Chart extends React.Component {
       this.setState({ chart1Data: res.data });
     });
 
-    axios
-      .get("http://localhost:8080/datav3m")
-      .then((res) => {
-        this.setState({ chart2Data: res.data });
-      })
+    axios.get("http://localhost:8080/datav3m").then((res) => {
+      this.setState({ chart2Data: res.data });
+    });
 
-      // axios.get('http://localhost:8080/datav4s1')
-      .then((res) => {
-        this.setState({ chart3Data: res.data });
-      });
+    axios.get("http://localhost:8080/datav4s1").then((res) => {
+      this.setState({ chart3Data: res.data });
+    });
+
+    axios.get("http://localhost:8080/datav4s2").then((res) => {
+      this.setState({ chart4Data: res.data });
+    });
+
+    axios.get("http://localhost:8080/datav4s3").then((res) => {
+      this.setState({ chart5Data: res.data });
+    });
+    axios.get("http://localhost:8080/datav10").then((res) => {
+      this.setState({ chart6Data: res.data });
+    });
   }
 
   render() {
     const data = {
       datasets: [
         {
-          label: "V3 Annual",
+          label: "Annual C02",
           data: this.state.chart1Data,
-          borderColor: "black",
-          backgroundColor: "black",
+          borderColor: "#09695F",
+          backgroundColor: "#09695F",
           parsing: {
             xAxisKey: "year",
             yAxisKey: "co2",
           },
         },
         {
-          label: "V3 Monthly",
+          label: "Monthly C02",
           data: this.state.chart2Data,
-          borderColor: "rgb(127, 98, 199)",
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: "#E0800B",
+          backgroundColor: "#E0800B",
           parsing: {
             xAxisKey: "year",
             yAxisKey: "co2",
           },
         },
         {
-          label: "V4 set 1",
+          label: "DE08 Ice Core",
           data: this.state.chart3Data,
-          borderColor: "rgb(214, 98, 73)",
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: "#9D00DB",
+          backgroundColor: "#9D00DB",
           parsing: {
             xAxisKey: "airAge",
             yAxisKey: "co2",
+          },
+        },
+        {
+          label: "DE08-2 Ice Core",
+          data: this.state.chart4Data,
+          borderColor: "#F2180C",
+          backgroundColor: "#F2180C",
+          parsing: {
+            xAxisKey: "airAge",
+            yAxisKey: "co2",
+          },
+        },
+        {
+          label: "DSS Ice Core",
+          data: this.state.chart5Data,
+          borderColor: "#25A2F5",
+          backgroundColor: "#25A2F5",
+          parsing: {
+            xAxisKey: "airAge",
+            yAxisKey: "co2",
+          },
+        },
+        {
+          label: "Human events",
+          // data: this.state.chart6Data,
+          borderColor: "blue",
+          backgroundColor: "red",
+          YAxisID: "events",
+          parsing: {
+            xAxisKey: "year",
+            yAxisKey: "event",
           },
         },
       ],
@@ -66,10 +105,15 @@ export default class DataV3Chart extends React.Component {
 
     const options = {
       scales: {
-        x: { title: { display: true, text: "Year/Month" } },
-        y: { title: { display: true, text: "Anomaly (deg C)" } },
+        x: {
+          max: 2022,
+          type: "linear",
+          title: { display: true, text: "Year" },
+        },
+        y: { title: { display: true, text: "C02 Mixing Ratio" } },
       },
       responsive: true,
+
       pointRadius: 1,
       plugins: {
         legend: {
