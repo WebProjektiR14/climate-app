@@ -1,6 +1,6 @@
 import '../User.css'
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Kirjautuminen';
 import '../components/Navbar';
 
