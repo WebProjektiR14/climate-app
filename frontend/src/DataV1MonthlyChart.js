@@ -75,7 +75,7 @@ export default class DataV1MonthlyChart extends React.Component {
         },
         title: {
           display: true,
-          text: "V1 annual",
+          text: "V1 monthly",
         },
       },
     };

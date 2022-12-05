@@ -72,8 +72,8 @@ export default class DataV3Chart extends React.Component {
         {
           label: "DE08-2 Ice Core",
           data: this.state.chart4Data,
-          borderColor: "#F2180C",
-          backgroundColor: "#F2180C",
+          borderColor: "brown",
+          backgroundColor: "brown",
           parsing: {
             xAxisKey: "airAge",
             yAxisKey: "co2",
@@ -90,14 +90,17 @@ export default class DataV3Chart extends React.Component {
           },
         },
         {
-          label: "Human events",
-          // data: this.state.chart6Data,
-          borderColor: "blue",
+          label: "Human Evolution and Activities",
+          data: this.state.chart6Data,
+          borderColor: "transparent",
           backgroundColor: "red",
+          showLine: "false",
           YAxisID: "events",
+          pointHoverRadius: 10,
+          pointRadius: 5,
           parsing: {
             xAxisKey: "year",
-            yAxisKey: "event",
+            yAxisKey: "spot",
           },
         },
       ],
@@ -116,6 +119,16 @@ export default class DataV3Chart extends React.Component {
 
       pointRadius: 1,
       plugins: {
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              if (context.dataset.label === "Human Evolution and Activities") {
+                return context.dataset.data[context.dataIndex].event;
+              }
+              return context.dataset.label;
+            },
+          },
+        },
         legend: {
           position: "top",
         },

@@ -13,10 +13,10 @@ function App() {
       <DataV9Chart />
       <DataV7Chart />
       <DataV6Chart />
+      <DataV5Chart />
       <DataV3Chart />
       <DataV1AnnualChart />
       <DataV1MonthlyChart />
-      <DataV5Chart />
     </div>
   );
 }

@@ -11,6 +11,7 @@ public class DataV10 {
 
     @Id
     private Integer iddata_v10;
+    private Integer spot;
     private Integer years_ago;
     private String event;
 
@@ -22,6 +23,9 @@ public class DataV10 {
         return this.iddata_v10;
     }
 
+    public Integer getSpot(){
+        return this.spot;
+    }
 
     public Integer getYear(){
         return this.years_ago;

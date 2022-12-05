@@ -51,11 +51,14 @@ export default class DataV7Chart extends React.Component {
         {
           label: "Human Evolution and Activities",
           data: this.state.chart3Data,
-          borderColor: "red",
+          borderColor: "transparent",
           backgroundColor: "red",
+          pointHoverRadius: 10,
+          pointRadius: 5,
+          showLine: "false",
           parsing: {
             xAxisKey: "year",
-            yAxisKey: "event",
+            yAxisKey: "spot",
           },
         },
       ],
@@ -98,6 +101,16 @@ export default class DataV7Chart extends React.Component {
       responsive: true,
       pointRadius: 1,
       plugins: {
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              if (context.dataset.label === "Human Evolution and Activities") {
+                return context.dataset.data[context.dataIndex].event;
+              }
+              return context.dataset.label;
+            },
+          },
+        },
         legend: {
           position: "top",
         },
