@@ -54,7 +54,7 @@ export default class DataV6Chart extends React.Component {
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1>Ice core 800 000 year CO2 measurements</h1>
         <Line options={options} data={data} />
       </div>

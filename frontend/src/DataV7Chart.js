@@ -122,7 +122,7 @@ export default class DataV7Chart extends React.Component {
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1>Evolution of global temperature over the past two million years</h1>
         <Line options={options} data={data} />
       </div>

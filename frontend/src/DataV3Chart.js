@@ -140,7 +140,7 @@ export default class DataV3Chart extends React.Component {
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1> Atmospheric CO2 measurements from Mauna Loa, 1958 onwards</h1>
         <Line options={options} data={data} />
       </div>
