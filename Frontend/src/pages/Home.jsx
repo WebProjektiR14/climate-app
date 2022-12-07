@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
-import { BrowserRouter, Router, Switch, Route } from 'react-router-dom';
+
 
 
  function Home() {
+    return(
+        <h1>This is a home page</h1>
+    );
 
     }
 export default Home;

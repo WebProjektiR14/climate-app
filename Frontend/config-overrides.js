@@ -1,4 +1,3 @@
- 
 const webpack = require('webpack'); 
 module.exports = function override(config) { 
 		const fallback = config.resolve.fallback || {}; 
@@ -11,7 +10,10 @@ module.exports = function override(config) {
       "os": require.resolve("os-browserify"), 
       "url": require.resolve("url"),
       "path": require.resolve("path-browserify"),
-      "zlib": require.resolve("browserify-zlib")
+      "zlib": require.resolve("browserify-zlib"),
+      async_hooks: false,
+      fs: false,
+      net: false,
       }) 
    config.resolve.fallback = fallback; 
    config.plugins = (config.plugins || []).concat([ 
