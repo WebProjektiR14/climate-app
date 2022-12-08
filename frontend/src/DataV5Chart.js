@@ -46,7 +46,7 @@ export default class DataV5Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V5",
+          text: " Barnola, J.-M., D. Raynaud, C. Lorius, and N.I. Barkov. 2003. Historical CO2 record from the Vostok ice core.",
         },
       },
     };

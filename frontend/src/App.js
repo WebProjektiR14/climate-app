@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <DataV9Chart />
-      <h2>Description text</h2>
       <textarea id="container" rows="4" cols="50"></textarea>
       <button id="save">Save</button>
       <div className="link">
@@ -21,8 +20,34 @@ function App() {
         </a>
       </div>
       <DataV7Chart />
+      <div className="link">
+        Data source:&nbsp;
+        <a href="http://carolynsnyder.com/publications.php">
+          http://carolynsnyder.com/publications.php
+        </a>
+        ,&nbsp;
+        <a href="https://www.southampton.ac.uk/~cpd/history.html">
+          https://www.southampton.ac.uk/~cpd/history.html
+        </a>
+        ,&nbsp;
+        <a href="https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt">
+          https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt
+        </a>
+      </div>
       <DataV6Chart />
+      <div className="link">
+        Data source:&nbsp;
+        <a href="https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt">
+          https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt
+        </a>
+      </div>
       <DataV5Chart />
+      <div className="link">
+        Data source:&nbsp;
+        <a href="https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2">
+          https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2
+        </a>
+      </div>
       <DataV3Chart />
       <div className="link">
         Data sources:&nbsp;

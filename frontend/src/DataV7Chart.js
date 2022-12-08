@@ -116,7 +116,7 @@ export default class DataV7Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V7",
+          text: "Carolyn W. Snyder, Evolution of global temperature over the past two million years. 2016, Nature. C. Patrick Doncaster, Timeline of the Human Condition. Bereiter, B., S. Eggleston, J. Schmitt, C. Nehrbass-Ahles, T. F. Stocker, H. Fischer, S. Kipfstuhl, J. Chappellaz. 2015.",
         },
       },
     };

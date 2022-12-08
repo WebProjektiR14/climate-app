@@ -48,7 +48,7 @@ export default class DataV6Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V6",
+          text: "Bereiter, B., S. Eggleston, J. Schmitt, C. Nehrbass-Ahles, T. F. Stocker, H. Fischer, S. Kipfstuhl, J. Chappellaz. 2015. Revision of the EPICA Dome C CO2 record from 800 to 600 kyr before present.",
         },
       },
     };

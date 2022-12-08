@@ -110,6 +110,7 @@ export default class DataV3Chart extends React.Component {
       scales: {
         x: {
           max: 2022,
+          min: 1000,
           type: "linear",
           title: { display: true, text: "Year" },
         },
@@ -134,7 +135,7 @@ export default class DataV3Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V3",
+          text: "Dr. Pieter Tans, NOAA/GML (gml.noaa.gov/ccgg/trends/) and Dr. Ralph Keeling, Scripps Institution of Oceanography (scrippsco2.ucsd.edu/). D.M. Etheridge, L.P. Steele, R.L. Langenfelds, R.J. Francey, J.-M. Barnola and V.I. Morgan. 1998. Historical CO2 records from the Law Dome DE08, DE08-2, and DSS ice cores. C. Patrick Doncaster, Timeline of the Human Condition. ",
         },
       },
     };
