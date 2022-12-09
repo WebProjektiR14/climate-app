@@ -1,4 +1,3 @@
-import { application } from 'express';
 import React, { useState } from 'react';
 import './Kirjautuminen.css';
 import { Login } from "./pages/Login"
@@ -14,7 +13,7 @@ function Kirjautuminen() {
   return (
     <div className="Kirjautuminen">
       {
-        currentForm == "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       }
     </div>
   );
