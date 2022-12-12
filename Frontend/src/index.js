@@ -6,7 +6,6 @@ import Layout from './pages/Layout';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import User from './pages/User';
-import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import Kirjautuminen from './Kirjautuminen';
 import reportWebVitals from './reportWebVitals';
@@ -17,7 +16,7 @@ export default function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+        <Route index element={<Login />} />
         <Route path="login" element={<Login />} />
         <Route path="Register" element={<Register />} />
         <Route path="*" element={<NoPage />} />
