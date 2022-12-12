@@ -42,11 +42,6 @@ function Navbar() {
                   User
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link to='/NoPage' className='nav-links' onClick={closeMobileMenu}>
-                  NoPage
-                </Link>
-              </li>
               <li>
                 <Link to='/kirjautuminen' className='nav-links-mobile' onClick={closeMobileMenu}>
                   Log in
