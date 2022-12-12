@@ -75,13 +75,13 @@ export default class DataV1MonthlyChart extends React.Component {
         },
         title: {
           display: true,
-          text: "V1 monthly",
+          text: " Moberg, A., et al. 2005.2,000-Year Northern Hemisphere Temperature Reconstruction. IGBP PAGES/World Data Center for Paleoclimatology Data Contribution Series # 2005-019. NOAA/NGDC Paleoclimatology Program, Boulder CO, USA.",
         },
       },
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1>
           Global historical surface temperature anomalies from January 1850
           onwards (Monthly data)

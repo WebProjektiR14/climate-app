@@ -46,13 +46,13 @@ export default class DataV5Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V5",
+          text: " Barnola, J.-M., D. Raynaud, C. Lorius, and N.I. Barkov. 2003. Historical CO2 record from the Vostok ice core.",
         },
       },
     };
 
     return (
-      <div style={{ width: "1000px" }}>
+      <div style={{ width: "1000px", paddingTop: "100px" }}>
         <h1>Historical Co2 Records from the Vostok Ice Core</h1>
         <Line options={options} data={data} />
       </div>

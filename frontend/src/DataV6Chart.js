@@ -48,13 +48,13 @@ export default class DataV6Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V6",
+          text: "Bereiter, B., S. Eggleston, J. Schmitt, C. Nehrbass-Ahles, T. F. Stocker, H. Fischer, S. Kipfstuhl, J. Chappellaz. 2015. Revision of the EPICA Dome C CO2 record from 800 to 600 kyr before present.",
         },
       },
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1>Ice core 800 000 year CO2 measurements</h1>
         <Line options={options} data={data} />
       </div>

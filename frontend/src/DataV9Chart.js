@@ -60,7 +60,7 @@ function DataV9Chart() {
     plugins: {
       title: {
         display: true,
-        text: "V9",
+        text: "Hannah Ritchie, Max Roser and Pablo Rosado (2020) - CO₂ and Greenhouse Gas Emissions. Published online at OurWorldInData.org.",
         responsive: true,
         animation: {
           animateScale: true,
@@ -70,7 +70,7 @@ function DataV9Chart() {
     },
   };
   return (
-    <div style={{ width: "60%", align: "" }}>
+    <div style={{ width: "80%", align: "", paddingTop: "100px" }}>
       <h1>Share of global greenhouse gas emissions by sector</h1>
       <Doughnut data={data} options={options} />
     </div>

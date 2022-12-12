@@ -116,13 +116,13 @@ export default class DataV7Chart extends React.Component {
         },
         title: {
           display: true,
-          text: "V7",
+          text: "Carolyn W. Snyder, Evolution of global temperature over the past two million years. 2016, Nature. C. Patrick Doncaster, Timeline of the Human Condition. Bereiter, B., S. Eggleston, J. Schmitt, C. Nehrbass-Ahles, T. F. Stocker, H. Fischer, S. Kipfstuhl, J. Chappellaz. 2015.",
         },
       },
     };
 
     return (
-      <div style={{ width: "90%", align: "" }}>
+      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
         <h1>Evolution of global temperature over the past two million years</h1>
         <Line options={options} data={data} />
       </div>
