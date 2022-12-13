@@ -1,10 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Layout from "./pages/Layout";
+import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
+import User from "./pages/User";
+import NoPage from "./pages/NoPage";
+import Kirjautuminen from "./Kirjautuminen";
+import reportWebVitals from "./reportWebVitals";
+import Charts from "./Charts";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Login />} />
+          <Route path="login" element={<Login />} />
+          <Route path="Register" element={<Register />} />
+          <Route path="*" element={<NoPage />} />
+          <Route path="Kirjautuminen" element={<Kirjautuminen />} />
+          <Route path="User" element={<User />} />
+          <Route path="Charts" element={<Charts />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

@@ -7,9 +7,9 @@ import DataV6Chart from "./DataV6Chart";
 import DataV7Chart from "./DataV7Chart";
 import DataV9Chart from "./DataV9Chart";
 
-function App() {
+function Charts() {
   return (
-    <div className="App">
+    <div className="Charts" style={{ backgroundColor: "#ffffff" }}>
       <DataV9Chart />
       <textarea id="container" rows="4" cols="50"></textarea>
       <button id="save">Save</button>
@@ -89,4 +89,4 @@ function App() {
   );
 }
 
-export default App;
+export default Charts;

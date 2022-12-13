@@ -95,7 +95,13 @@ export default class DataV1AnnualChart extends React.Component {
     };
 
     return (
-      <div style={{ width: "90%", align: "", paddingTop: "100px" }}>
+      <div
+        style={{
+          width: "90%",
+          align: "",
+          paddingTop: "100px",
+        }}
+      >
         <h1>
           Global historical surface temperature anomalies from January 1850
           onwards (Annual data)
