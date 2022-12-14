@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.climate.db.data.VisualSelect;
 import com.climate.db.data.User;
 import com.climate.db.data.DataV10;
 import com.climate.db.data.DataV1GlobalAnnual;
@@ -42,9 +43,22 @@ import com.climate.db.repo.DataV10Repository;
 import com.climate.db.repo.DataV9Repository;
 
 import com.climate.db.repo.UserRepository;
+import com.climate.db.repo.VisualSelectRepository;
 
 @Service
 public class ClimateDataService {
+
+    @Autowired
+
+    VisualSelectRepository visualSelectRepository;
+
+    public void saveVisualSelect (VisualSelect visualSelect){
+        visualSelectRepository.save (visualSelect);
+    }
+
+    public List<VisualSelect> getVisualSelect() {
+        return visualSelectRepository.findAll();
+    }
 
     @Autowired
     UserRepository userRepository;
