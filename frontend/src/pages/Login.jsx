@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import '../Kirjautuminen.css';
-
+import Axios from "axios"
 export const Login =(props) => {
     const [user, setUser] =useState('');
     const [pass, setPass] = useState('');
@@ -10,6 +10,16 @@ export const Login =(props) => {
         e.preventDefault();
         console.log(user);
     }
+
+
+    const login = () => {
+        Axios.post('http://localhost:3001/login', {
+          user: user,
+          pass: pass,
+        }).then((response) => {
+          console.log(response);
+        });
+      };
 
     
     return (
@@ -30,7 +40,8 @@ export const Login =(props) => {
                      placeholder="*******"
                      id="password"
                      name="password" />
-                <button type="submit">
+                <button type ="submit" onClick={login}>
+                
                 <Link to='/user'>
                     Log In
                 </Link>
