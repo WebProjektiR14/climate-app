@@ -21,7 +21,6 @@ public class DbApplication {
 		
 	}
 
-	//save lisää käyttäjä tai päivitä tietoja
 	@PostConstruct
 	public void init(){
 		userRepo.save(new User (1,"Miia","salasana"));

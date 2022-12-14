@@ -52,7 +52,7 @@ export default class DataV5Chart extends React.Component {
     };
 
     return (
-      <div style={{ width: "1000px", paddingTop: "100px" }}>
+      <div style={{ width: "90%", paddingTop: "100px" }}>
         <h1>Historical Co2 Records from the Vostok Ice Core</h1>
         <Line options={options} data={data} />
       </div>
