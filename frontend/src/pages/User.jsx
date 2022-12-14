@@ -23,6 +23,9 @@ function User(){
                 <Link id="menu-items" class='menu-item' to="/Charts">Charts</Link>
             </li>
             <li>
+                <Link id="menu-items" class='menu-item' to="/Createview">Visualization creation</Link>
+            </li>
+            <li>
                 <Link id="menu-items" class='menu-item' to="/about">About</Link>
             </li>
             <li>
