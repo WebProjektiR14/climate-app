@@ -1,0 +1,23 @@
+.form {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }  
+  .row {
+    display: flex;
+    height: 100vh;
+    background-color:white;
+  }
+
+  .selectionbar {
+    background-color: #ccc;
+    padding: 20px;
+    flex: 20%;
+    float: left;
+  }
+
+  .column {
+    flex: 90%;
+    padding: 20px;
+    display: block;
+  }

@@ -1,6 +1,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Layout from "./pages/Layout";
 import { Login } from "./pages/Login";
@@ -10,7 +11,8 @@ import NoPage from "./pages/NoPage";
 import Kirjautuminen from "./Kirjautuminen";
 import reportWebVitals from "./reportWebVitals";
 import Charts from "./Charts";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CreateView from "./CreateView";
+
 
 export default function App() {
   return (
@@ -24,6 +26,7 @@ export default function App() {
           <Route path="Kirjautuminen" element={<Kirjautuminen />} />
           <Route path="User" element={<User />} />
           <Route path="Charts" element={<Charts />} />
+          <Route path="Createview" element={<CreateView />} />
         </Route>
       </Routes>
     </BrowserRouter>
