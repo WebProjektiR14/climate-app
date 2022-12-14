@@ -26,7 +26,7 @@ public class DbApplication {
 
 	@PostConstruct
 	public void init(){
-		userRepo.save(new User (1,"Miia","salasana"));
+		userRepo.save(new User (1,"User","salasana"));
 
 		Optional<User> opt = userRepo.findById(1);
 	

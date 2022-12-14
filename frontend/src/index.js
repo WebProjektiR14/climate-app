@@ -7,12 +7,12 @@ import Layout from "./pages/Layout";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import User from "./pages/User";
+import About from "./pages/About";
 import NoPage from "./pages/NoPage";
 import Kirjautuminen from "./Kirjautuminen";
 import reportWebVitals from "./reportWebVitals";
 import Charts from "./Charts";
 import CreateView from "./CreateView";
-
 
 export default function App() {
   return (
@@ -21,8 +21,10 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Login />} />
           <Route path="login" element={<Login />} />
+          <Route path="Logout" element={<Kirjautuminen />} />
           <Route path="Register" element={<Register />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="About" element={<About />} />
           <Route path="Kirjautuminen" element={<Kirjautuminen />} />
           <Route path="User" element={<User />} />
           <Route path="Charts" element={<Charts />} />

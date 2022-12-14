@@ -11,8 +11,6 @@ function Charts() {
   return (
     <div className="Charts" style={{ backgroundColor: "#ffffff" }}>
       <DataV9Chart />
-      <textarea id="container" rows="4" cols="50"></textarea>
-      <button id="save">Save</button>
       <div className="link">
         Data source:&nbsp;
         <a href="https://ourworldindata.org/uploads/2020/09/Global-GHG-Emissions-by-sector-based-on-WRI-2020.xlsx">
