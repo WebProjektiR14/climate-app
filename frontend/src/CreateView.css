@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  background-color:white;
+  height: 150vh;
+}
+
+.selectionbar {
+  background-color: #ccc;
+  padding: 20px;
+  flex: 6%;
+  float: left;
+}
+
+.save-container {
+    padding-top: 40px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.column {
+  flex: 94%;
+  padding: 40px;
+}
