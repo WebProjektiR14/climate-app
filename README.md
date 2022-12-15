@@ -38,3 +38,6 @@
    Miia Järvenpää – MySQL-tietokannan rakenteen suunnittelu ja datasettien valmistelu, tutkimusdatojen haku tietokannasta ja kaavioiden piirtäminen (Chart.js).
     
    Tommi Hirvonen – Kirjautumisen backend.
+   
+### Projektin demovideo
+   https://www.youtube.com/watch?v=YB3O_B3UULo
