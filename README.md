@@ -1,7 +1,11 @@
 # Web-ohjelmoinnin sovellusprojekti – Ilmastodatasovellus 
 
 ##  Kuvaus:
-    Tämä projektin tarkoituksena on luoda julkisessa internetissä toimiva ilmastonmuutokseen liittyvien tutkimustietojen visualisointisovellus, jonka avulla         käyttäjä voi luoda, muokata ja jakaa näkymiä. Sovellukseen kirjaudutaan omilla tunnuksilla, jolloin käyttäjän tekemät muutokset tallentuvat tilille. 
+    Tämä projektin tarkoituksena on luoda julkisessa internetissä
+    toimiva ilmastonmuutokseen liittyvien tutkimustietojen 
+    visualisointisovellus, jonka avulla
+    käyttäjä voi luoda, muokata ja jakaa näkymiä. 
+    Sovellukseen kirjaudutaan omilla tunnuksilla, jolloin käyttäjän tekemät muutokset tallentuvat tilille. 
     
 ##  Projektissa käytetyt teknologiat:  
     MySQL, JavaScript, Java, React, Postman, Chart.js, Node.js 
